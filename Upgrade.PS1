@@ -32,7 +32,7 @@ if($fortiClient6000067 -ne $null) {
 				} Else {
 				
 				echo $warnNotInstalled + "6.0.3.0155"
-				(Start-Process -FilePath $fcInstallPath -ArgumentList "TRANSFORMS="%~dp0FortiClient.mst" /QN /L* %USERPROFILE%\Documents\fortiClient6030155_Install.log" -Wait -Passthru).ExitCode
+				(Start-Process -FilePath $fcInstallPath -ArgumentList "TRANSFORMS='%~dp0FortiClient.mst' /QN /L* %USERPROFILE%\Documents\fortiClient6030155_Install.log" -Wait -Passthru).ExitCode
 				pause
 				Restart-Computer -Force
 				
